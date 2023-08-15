@@ -1,0 +1,59 @@
+{
+  "name": "@jvbjs/jvb-design-web-vue",
+  "version": "1.0.0",
+  "description": "Jvb Design Vue 1.0: A Vue.js 3 UI Library.",
+  "keywords": [
+    "jvbf2e",
+    "jvb",
+    "vue"
+  ],
+  "author": "Jvbf2e Team",
+  "homepage": "https://jvb.design.vvimo.com/vue",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "unpkg": "dist/arco-vue.min.js",
+  "files": [
+    "es",
+    "lib",
+    "dist",
+    "json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvbf2e/jvb-design.git"
+  },
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ],
+  "scripts": {
+    "start": "jvb-vue-scripts dev:component",
+    "build": "pnpm build:component && pnpm dtsgen",
+    "build:component": "jvb-vue-scripts build:component -u",
+    "build:module": "jvb-vue-scripts build:component",
+    "build:style": "jvb-vue-scripts build:style",
+    "dtsgen": "jvb-vue-scripts dtsgen components/**/*.{ts,tsx,vue}"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.0"
+  },
+  "devDependencies": {
+    "@arco-design/arco-vue-scripts": "^0.2.9",
+    "@jvbf2e/jvb-vue-scripts": "^0.1.22",
+    "@jvbjs/eslint-config": "^1.0.8",
+    "@jvbjs/prettier-config": "^1.0.3",
+    "@jvbjs/stylelint-config": "^1.0.3",
+    "@types/jest": "^29.5.3",
+    "@vue/test-utils": "^2.4.1",
+    "eslint-plugin-vue": "^9.17.0",
+    "jest": "^29.6.2",
+    "sass": "^1.65.1",
+    "typescript": "^5.1.6",
+    "vue-jest": "^3.0.7"
+  },
+  "prettier": "@jvbjs/prettier-config"
+}

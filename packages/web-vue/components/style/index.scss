@@ -1,0 +1,10 @@
+@import './normalize.scss';
+@import './icon.scss';
+@import './animation/index.scss';
+@import './theme/index.scss';
+@import './theme/css-variables.scss';
+
+body {
+  font-size: $font-size-body;
+  font-family: $font-family;
+}

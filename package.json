@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "name": "jvb-design-monorepo",
+  "description": "Jvb Design UI Library.",
+  "version": "0.0.0",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvbf2e/jvb-design.git"
+  },
+  "keywords": [
+    "jvb",
+    "jvb-design",
+    "jvbf2e"
+  ],
+  "author": "luyj <vvimoink@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jvbf2e/jvb-design/issues"
+  },
+  "scripts": {
+    "start": "pnpm -C packages/web-vue & pnpm start",
+    "build": "pnpm build:component && pnpm dtsgen && pnpm jsongen",
+    "build:component": "arco-vue-scripts build:component -u",
+    "build:module": "arco-vue-scripts build:component",
+    "build:style": "arco-vue-scripts build:style",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@jvbjs/eslint-config": "^1.0.8",
+    "@jvbjs/prettier-config": "^1.0.3",
+    "@jvbjs/stylelint-config": "^1.0.3",
+    "rollup": "^3.28.0",
+    "typescript": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=7"
+  },
+  "prettier": "@jvbjs/prettier-config"
+}
+
